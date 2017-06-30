@@ -2,35 +2,49 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Scheherazade" rel="stylesheet">
     <link rel="stylesheet" href="/build/css/vendor.css">
-    <link rel="stylesheet" href="/sass/styles.css">
+    <link rel="stylesheet" href="/build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
+    <link rel="icon" href="/scss/img/rxLogo.png" type="image">
     <title>Doctor-Lookup</title>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Doctor-Lookup</h1>
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>Doctor-Lookup</h1>
+          </div>
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-4">
+            <img src="/scss/img/rxLogo.png" alt="Rx" />
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-sm-4">
+          <h4>Find a doctor!</h4>
           <form id="issueForm">
             <label for="issue">Issue: </label>
             <input id="issue" type="text" name="issue">
             <button type="submit" name="button">Get Help!</button>
           </form>
-
           <div id="output">
-            <h3 id="issue">Doctors for </h3>
+            <h3 id="issue">Doctors for <span id="insertedIssue"></span></h3>
             <ul id="doctor">
             </ul>
           </div>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-4">
+          <img id="drMario" src="scss/img/drMario.gif-c200" alt="Dr. Mario!" />
+        </div>
+        <div class="col-sm-4">
+          <h4>List of Symptoms/Areas of interest</h4>
           <div id="symptomsOutput">
             <ul id="symptoms">
-
             </ul>
           </div>
         </div>

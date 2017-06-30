@@ -1,0 +1,22 @@
+$grey : #d4d4d4;
+
+body {
+  font-family: 'Scheherazade', serif;
+  background: $grey;
+}
+
+#output {
+  display: none;
+}
+
+.jumbotron{
+  background: #fff;
+  height: 250px;
+  border: 3px solid #03aba8;
+  img {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -80px;
+  }
+}

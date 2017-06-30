@@ -7,8 +7,11 @@ Doctor.prototype.getDoctors = function(medicalIssue, showDoctors) {
      var doctorObject = {};
      doctorObject.name = new Array();
      doctorObject.status = new Array();
+     if(result.data.length === 0)
+     {
+       showDoctors("There are 0 specialists found in the Portland Area", "Please consult with your PCP for more advice or try again in the search-box")
+     }
      for(var i=0;i<result.data.length;i++){
-       console.log(result.data[i].practices[0].name);
        doctorObject.name.push(result.data[i].practices[0].name);
        if (result.data[i].practices[0].accepts_new_patients === true) {
          doctorObject.status.push("Accepting new patients");
@@ -18,7 +21,6 @@ Doctor.prototype.getDoctors = function(medicalIssue, showDoctors) {
        }
        showDoctors(doctorObject.name[i], doctorObject.status[i]);
      }
-     console.log(doctorObject);
     })
    .fail(function(error){
       console.log("fail");
@@ -27,11 +29,10 @@ Doctor.prototype.getDoctors = function(medicalIssue, showDoctors) {
 
 Doctor.prototype.getSymptoms = function(showSymptoms){
   $.get('https://api.betterdoctor.com/2016-03-01/conditions?skip=0&limit=10&user_key=' + apiKey).then(function(result){
-    var symptoms = [];
+    var allSymptoms = [];
     for (var k = 0; k < result.data.length; k++) {
-      symptoms.push(result.data[k].name);
-      console.log(symptoms[k]);
-      showSymptoms(symptoms[k]);
+      allSymptoms.push(result.data[k].name);
+      showSymptoms(allSymptoms[k]);
     }
   })
 };
