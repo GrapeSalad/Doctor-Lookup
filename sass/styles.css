@@ -1,3 +1,7 @@
 body {
-  background: #000;
+  background: #fff;
+}
+
+#output {
+  display: none;
 }
