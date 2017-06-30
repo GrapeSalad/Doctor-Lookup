@@ -1,0 +1,21 @@
+{
+  "name": "doctor-lookup",
+  "description": "A site that helps a user find a doctor for your illness",
+  "main": "gulpfile.js",
+  "authors": [
+    "David Wilson"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/GrapeSalad/Doctor-Lookup.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7"
+  }
+}
