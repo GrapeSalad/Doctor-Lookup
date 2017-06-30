@@ -9,16 +9,32 @@
     <title>Doctor-Lookup</title>
   </head>
   <body>
-    <form id="issueForm">
-      <label for="issue">Issue: </label>
-      <input id="issue" type="text" name="issue">
-      <button type="submit" name="button">Get Help!</button>
-    </form>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Doctor-Lookup</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <form id="issueForm">
+            <label for="issue">Issue: </label>
+            <input id="issue" type="text" name="issue">
+            <button type="submit" name="button">Get Help!</button>
+          </form>
 
-    <div id="output">
-      <h3 id="issue">Doctors for </h3>
-      <ul id="doctor">
-      </ul>
+          <div id="output">
+            <h3 id="issue">Doctors for </h3>
+            <ul id="doctor">
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div id="symptomsOutput">
+            <ul id="symptoms">
+
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
