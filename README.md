@@ -20,7 +20,7 @@ Two installations necessary for SASS:
 | bower |$ bower init |none needed | none |
 | gulp |$ npm install gulp --save-dev |var gulp = require('gulp'); | none |
 | browser-sync |$ npm install browser-sync --save-dev |var browserSync = require('browser-sync').create(); | none |
-| browserify |$ npm install browserify --save-dev|var browserify = require('browserify'); | gulp.task('jsBrowserify', ['concatInterface'], function() {return browserify({ entries: ['./tmp/allConcat.js'] }).bundle().pipe(source('app.js')).pipe(gulp.dest('./build/js'));}); |
+| browserify |$ npm install browserify --save-dev|```var browserify = require('browserify');``` | gulp.task('jsBrowserify', ['concatInterface'], function() {return browserify({ entries: ['./tmp/allConcat.js'] }).bundle().pipe(source('app.js')).pipe(gulp.dest('./build/js'));}); |
 | browserify dependencies |$ npm install vinyl-source-stream --save-dev |var source = require('vinyl-source-stream'); | none |
 | concat |$ npm install gulp-concat --save-dev |var concat = require('gulp-concat'); | gulp.task('concatInterface', function() {return gulp.src(['./js/*-interface.js']).pipe(concat('allConcat.js')).pipe(gulp.dest('./tmp'));}); |
 | uglify(minify) |$ npm install gulp-uglify --save-dev |var uglify = require('gulp-uglify'); | gulp.task("minifyScripts", ["jsBrowserify"], function(){return gulp.src("./build/js/app.js").pipe(uglify()).pipe(gulp.dest("./build/js"));}); |
